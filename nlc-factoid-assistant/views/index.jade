@@ -1,0 +1,64 @@
+doctype html
+html
+    head
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        meta(charset="utf-8")
+
+        link(href="images/favicon.png" type="image/png" rel="icon")
+        link(href="stylesheets/nlc_factoid.css" type="text/css" rel="stylesheet")
+        link(href="stylesheets/ladda/ladda-themeless.min.css" type="text/css" rel="stylesheet")
+
+        title NLC Factoid
+
+    body.bodyBackground
+        div#exampleQuestionsDiv
+
+        span#betaBanner
+            a(href="http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/question-answer.html" target="_blank") Watson Demo
+        div.clearBoth
+
+        div#mainWrapper
+            div#searchInputWrapper.searchInputWrapperNoAnswer
+                div#appHeading
+                div#appHeadingWrapper
+                        img#watsonImg.watsonImg(src="stylesheets/images/watson_logo.png")
+                        span#watsonHeading NLC
+                        span#demoName &nbsp;Factoid (Basic Edition)
+                        div#spacingHack
+                div#infoBubble I can find you a few facts from Wikipedia
+
+                div#searchDiv.searchDiv
+                    form#questionForm(role="form" target="form-iframe")
+                        input#questionInput.questionInput(type="text" placeholder="What's your question?" x-webkit-speech="x-webkit-speech")
+                        button#askButton.btn.btn-lg.btn-primary.ladda-button(type="submit" value="ask" data-style="expand-right" data-spinner-color="#003F69")
+                            span.ladda-label ASK
+
+                iframe(name="form-iframe" src="about:blank" class="hidden")
+
+            div#answerDetailsDiv.hidden
+                div#answerDiv
+                    Michelle Obama is Barack Obama's spouse
+                div#entityConceptsDiv
+                    div#entityConceptsDivLabel Entities and concepts detected:
+                    div#entityConceptsLeftDiv
+                        Barack Obama (e)
+                    div#entityConceptsDBpediaDiv
+                        Dbpedia
+                    div#entityConceptsFreebaseDiv
+                        Freebase
+                    div#entityConceptsYagoDiv
+                        Yago
+                    div#entityConceptsOpenCycDiv
+                        Opencyc
+                    div.clearBoth
+                div#FactoidDivFactoid Factoid type detected:
+                    div#factoidTypeDiv
+
+        <!-- Sample Answers -->
+        p#hiddenExampleQuestions.hidden #{exampleQuestions}
+
+    script(src="javascript/ladda/spin.min.js" type="text/javascript")<!-- Button w/Loading Indicator -->
+    script(src="javascript/ladda/ladda.min.js" type="text/javascript")<!-- Button w/Loading Indicator -->
+    script(src="javascript/jquery/jquery-2.1.0.min.js" type="text/javascript")<!-- jQuery -->
+    script(src="javascript/example_question_ux.js" type="text/javascript") <!-- Watson Team JS -->
+    script(src="javascript/factoid_assistant.js" type="text/javascript")<!-- Watson Team JS -->

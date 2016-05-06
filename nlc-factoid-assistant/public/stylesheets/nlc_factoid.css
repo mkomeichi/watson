@@ -1,0 +1,328 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: HelveticaNeue, Helvetica, Arial, sans-serif;
+}
+
+body a {
+    text-decoration: none;
+}
+body div {
+    box-sizing: border-box;
+}
+.bodyBackground{
+    background-color: #008abf;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#mainWrapper {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#searchInputWrapper {
+    position: relative;
+    color: #ffffff;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    margin-left: auto;
+    margin-right: auto;
+    padding:15px 15px 5px 30px;
+    border-radius:10px;
+    font-size:30px;
+
+    pointer-events: none; /* Ensure user can click links behind the wrapper */
+}
+.searchInputWrapperNoAnswer {
+    margin-top:100px;
+}
+.searchInputWrapperAnswers {
+    margin-top:25px;
+}
+#appHeading {
+    margin-left: auto;
+    margin-right: auto;
+}
+#appHeadingWrapper {
+    margin-left: auto;
+    margin-right: auto;
+}
+#spacingHack {
+    width:  500px;
+    height: 5px;
+}
+#infoBubble
+{
+    position: relative;
+    width: 400px;
+    height: 50px;
+    padding-top: 15px;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #17af4b;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    font-size:20px;
+    font-weight: normal;
+    text-align: center;
+}
+#infoBubble:after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 0 25px 27px;
+    border-color: #17af4b transparent;
+    display: block;
+    width: 0;
+    z-index: 1;
+    top: -27px;
+    left: 150px;
+}
+.watsonImg {
+    width:28px;
+    margin-right: 10px;
+}
+.watsonImgAnswers {
+    width:26px;
+    margin-right:5px;
+}
+#watsonHeading {
+    font-weight: bold;
+}
+#searchDiv {
+    margin-top:10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/** Answer Div **/
+#answerDetailsDiv {
+    position:relative;
+    padding-left: 40px;
+    padding-right: 25px;
+}
+#answerDiv {
+    background-color : #04b1f2;
+    color:#ffffff;
+    padding: 10px;
+    font-size: 16px;
+}
+#answerDiv a:link {
+    color: #fff;
+    text-decoration: underline;
+}
+#answerDiv a:visited {
+    color: #fff;
+    text-decoration: underline;
+}
+/*** Entity Div ***/
+#entityConceptsDiv {
+    background-color : #fff;
+    color:#000;
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 140%;
+}
+#entityConceptsDivLabel {
+    font-weight: bold;
+}
+#entityConceptsLeftDiv {
+    float: left;
+    padding-right: 5px;
+}
+#entityConceptsDBpediaDiv {
+    float: left;
+    padding-right: 5px;
+}
+#entityConceptsFreebaseDiv {
+    float: left;
+    padding-right: 5px;
+}
+#entityConceptsYagoDiv {
+    float: left;
+    padding-right: 5px;
+}
+/*** Factoid Div ***/
+#FactoidDivFactoid {
+    background-color : #fff;
+    color:#000;
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 140%;
+    font-weight: bold;
+}
+#factoidTypeDiv {
+    font-weight: normal;
+}
+/*** Question Input Placeholder ***/
+::-webkit-input-placeholder {
+    color:#50b6e1;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    color:#50b6e1;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+    color:#50b6e1;
+}
+
+:-ms-input-placeholder {
+    color:#50b6e1;
+}
+#questionInput {
+    color:#fff;
+    padding: 5px;
+    border:solid 1px #82d1f5;
+    margin-bottom: 5px;
+    background-color : #1a98ca;
+    width:625px;
+    font-size: 14px;
+    line-height:1.8;
+    pointer-events: auto; /* Ensure user can select the input */
+}
+#askButton {
+    border: 1px solid #82d1f5;
+    border-left: 0px;
+    background-color: #00b2ef;
+    background-repeat:no-repeat;
+    color:#fff;
+    font-size: 16px;
+    outline:none;
+    line-height: 30px;
+    width:100px;
+    pointer-events: auto; /* Ensure user can click button */
+}
+/***  Floating Questions ***/
+.exampleQuestionLink, .exampleQuestionLink:visited, .exampleQuestionLink:hover, .exampleQuestionLink:active {
+    /*color: #00b2ef;*/
+    font-size: 16px;
+    cursor: pointer;
+    position:abolute;
+}
+#copyright {
+    margin-top:5px;
+    text-align:center;
+    font-size: 10px;
+    color:#50b6e1;
+}
+
+/***  Common CSS ***/
+a:link, a:visited {
+    color: #888888;
+    text-decoration: underline;
+}
+.boldTitle {
+    color: #000;
+    font-weight: bold;
+}
+.hidden {
+    display: none;
+}
+.visible {
+    display: block;
+}
+.inline {
+    display: inline;
+}
+pre {
+    white-space: pre-wrap;       /* CSS 3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+.clearBoth {
+    clear:both;
+}
+
+/***  'Beta App' Ribbon Displayed in Upper-Right  ***/
+#betaBanner a {
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    font-family: arial, sans-serif;
+    text-align: center;
+    font-weight: bold;
+    padding: 5px 40px;
+    font-size: 1rem;
+    line-height: 2rem;
+    position: relative;
+    transition: 0.5s;
+}
+
+#betaBanner a:hover {
+    background: #c11;
+    color: #fff;
+}
+
+#betaBanner a::before,#betaBanner a::after {
+    content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 1px;
+    left: 0;
+    height: 1px;
+    background: #fff;
+}
+
+#betaBanner a::after {
+    bottom: 1px;
+    top: auto;
+}
+
+/***  Screen Size-Based Adjustments ***/
+@media screen and (min-width:800px) {
+    #betaBanner {
+        position: fixed;
+        display: block;
+        top: 0;
+        right: 0;
+        width: 200px;
+        overflow: hidden;
+        height: 200px;
+        z-index: 9999;
+    }
+    #betaBanner a {
+        width: 200px;
+        position: absolute;
+        top: 60px;
+        right: -60px;
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
+    }
+}
+
+@media (max-width: 800px) {
+
+}
+
+@media (max-width: 550px) {
+
+    #questionInput {
+        color:#000000;
+        padding: 5px;
+        margin-bottom: 5px;
+        font-size: 14px;
+        width:280px;
+    }
+    #askButton {
+        display: none;
+    }
+}

@@ -1,0 +1,15 @@
+declared-services:
+  ipa-dialog_service:
+    label: dialog
+    plan: standard
+  ipa-nlc_service:
+    label: natural_language_classifier
+    plan: standard
+applications:
+- services:
+  - ipa-nlc_service
+  - ipa-dialog_service
+  name: kome01_watson 
+  command: node app.js
+  path: .
+  memory: 128M
